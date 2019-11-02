@@ -25,3 +25,12 @@ exports.showPost = (req, res, next) =>{
         res.status(400).send(err);
     })
 };
+
+exports.singlePost = (req, res, next) =>{
+  Post.findById(req.params.id)
+      .then(result =>{
+          res.send(result);
+      }).catch(err => {
+          res.status(400).send(err);
+  })
+};
