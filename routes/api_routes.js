@@ -1,9 +1,8 @@
 const express = require('express');
+const postController = require('../controller/post_controller');
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
-    res.send('running node api');
-});
+router.get('/', postController.showIndex);
 
 module.exports = router;
 
