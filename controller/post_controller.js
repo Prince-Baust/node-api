@@ -17,3 +17,11 @@ exports.addPost = (req, res, next) => {
       res.status(400).send(err);
   })
 };
+
+exports.showPost = (req, res, next) =>{
+    Post.find().then(result =>{
+        res.send(result);
+    }).catch(err =>{
+        res.status(400).send(err);
+    })
+};
