@@ -9,9 +9,9 @@ exports.addPost = (req, res, next) => {
       title: req.body.title,
       description: req.body.description,
       image: req.body.image
-  }) .then(result => {
-      return result.save()
-  }).then(() => {
+  });
+  post.save()
+  .then(() => {
       res.send('post added succesfully!');
   }).catch(err => {
       res.status(400).send(err);
