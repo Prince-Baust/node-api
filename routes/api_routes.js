@@ -8,5 +8,9 @@ router.get('/post/:id', postController.singlePost);
 
 router.post('/add-post', postController.addPost);
 
+router.patch('/post-update', postController.updatePost);
+
+router.delete('/remove-post/:id', postController.deletePost);
+
 module.exports = router;
 
