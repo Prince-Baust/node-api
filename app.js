@@ -7,9 +7,9 @@ mongoose.connect("mongodb://localhost:27017/node_api_DB", {useUnifiedTopology: t
     console.log('database started!');
 });
 
-app.get('/', (req, res, next) =>{
-    res.send('running node api');
-});
+const apiroutes = require('/routes/api_routes.js');
+
+app.use('/', apiroutes);
 
 app.listen(3000, function () {
    console.log("Server started on port 3000");
