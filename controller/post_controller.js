@@ -38,6 +38,7 @@ exports.updatePost = (req, res, next) =>{
           result.title = req.body.title;
           result.description = req.body.description;
           result.image = req.body.image;
+          return result.save();
       }).then(() =>{
           res.send('post updated successfully!');
       }).catch(err =>{
