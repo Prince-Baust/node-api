@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const app = express();
 
 
+app.use(express.json());
+
 mongoose.connect("mongodb://localhost:27017/node_api_DB", {useUnifiedTopology: true, useNewUrlParser: true}, function () {
     console.log('database started!');
 });
