@@ -7,8 +7,8 @@ mongoose.connect("mongodb://localhost:27017/node_api_DB", {useUnifiedTopology: t
     console.log('database started!');
 });
 
-const apiroutes = require('/routes/api_routes.js');
 
+const apiroutes = require('./routes/api_routes');
 app.use('/', apiroutes);
 
 app.listen(3000, function () {
